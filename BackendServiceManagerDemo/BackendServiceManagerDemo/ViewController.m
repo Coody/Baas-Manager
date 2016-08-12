@@ -10,6 +10,8 @@
 #import "ParseBackendService.h"
 #import "BackendServiceManager.h"
 
+#import "App_BackendService_Properties.h"
+
 @interface ViewController ()
 
 @end
@@ -25,7 +27,9 @@
     parseBaasClass.parseObjectName = @"Your_Parse_Object_Name";
     
     [[BackendServiceManager sharedInstance] addServicesWithClasses:@[parseBaasClass]];
-    [[BackendServiceManager sharedInstance] startGetBaasWithSuccessBlock:^(id<BackendServiceObject_Protocol> baasClass) {
+    
+    // App_BackendService_Properties is not necessary, but you can follow this protocol to let your baasClass easy to use.
+    [[BackendServiceManager sharedInstance] startGetBaasWithSuccessBlock:^(id<BackendServiceObject_Protocol , App_BackendService_Properties > baasClass) {
         
         // Do whatever you want after you get baas service object
         NSLog(@"\n\nGet Baas Service success!\nBaaS name:%@\n\n", NSStringFromClass([baasClass class]));
