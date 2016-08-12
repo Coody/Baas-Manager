@@ -3,10 +3,10 @@
 Manage all your BaaS, set sequence eadily.
 
 # Brief
-`待補`
+`TODO`
 
 # How to use
-`待補`
+`TODO`
 
 # license
 MIT
