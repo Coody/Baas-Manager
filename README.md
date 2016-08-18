@@ -1,5 +1,8 @@
 # BackendServiceManager
 
+![建立者](https://img.shields.io/badge/建立者-Coody-orange.svg)
+![License](https://img.shields.io/dub/l/vibe-d.svg)
+
 Manage all your BaaS, set sequence easily.
 
 # Brief
