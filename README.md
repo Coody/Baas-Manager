@@ -1,6 +1,6 @@
 # BackendServiceManager
 
-Manage all your BaaS, set sequence eadily.
+Manage all your BaaS, set sequence easily.
 
 # Brief
 `TODO`
