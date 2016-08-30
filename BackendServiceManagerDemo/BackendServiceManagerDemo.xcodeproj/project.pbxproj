@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A5A8C9C1D75CAC30066B54D /* ParseBackendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5A8C981D75CAC30066B54D /* ParseBackendService.m */; };
+		5A5A8C9D1D75CAC30066B54D /* BackendServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5A8C9B1D75CAC30066B54D /* BackendServiceManager.m */; };
 		FB6170761D5D6EF5005F2487 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170751D5D6EF5005F2487 /* libz.tbd */; };
 		FB6170781D5D6F7C005F2487 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170651D5D6C90005F2487 /* AudioToolbox.framework */; };
 		FB6170791D5D6F85005F2487 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170671D5D6C98005F2487 /* CFNetwork.framework */; };
@@ -29,11 +31,14 @@
 		FB7EE3CE1D59828C00352344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7EE3CC1D59828C00352344 /* Main.storyboard */; };
 		FB7EE3D01D59828C00352344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7EE3CF1D59828C00352344 /* Assets.xcassets */; };
 		FB7EE3D31D59828C00352344 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7EE3D11D59828C00352344 /* LaunchScreen.storyboard */; };
-		FB7EE3E01D59832100352344 /* ParseBackendService.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EE3DC1D59832100352344 /* ParseBackendService.m */; };
-		FB7EE3E11D59832100352344 /* BackendServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EE3DF1D59832100352344 /* BackendServiceManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A5A8C961D75CAC30066B54D /* App_BackendService_Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App_BackendService_Properties.h; sourceTree = "<group>"; };
+		5A5A8C971D75CAC30066B54D /* ParseBackendService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBackendService.h; sourceTree = "<group>"; };
+		5A5A8C981D75CAC30066B54D /* ParseBackendService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBackendService.m; sourceTree = "<group>"; };
+		5A5A8C9A1D75CAC30066B54D /* BackendServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendServiceManager.h; sourceTree = "<group>"; };
+		5A5A8C9B1D75CAC30066B54D /* BackendServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackendServiceManager.m; sourceTree = "<group>"; };
 		FB6170651D5D6C90005F2487 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FB6170671D5D6C98005F2487 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		FB6170691D5D6CB8005F2487 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,11 +64,6 @@
 		FB7EE3CF1D59828C00352344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7EE3D21D59828C00352344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB7EE3D41D59828C00352344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB7EE3DB1D59832100352344 /* ParseBackendService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseBackendService.h; sourceTree = "<group>"; };
-		FB7EE3DC1D59832100352344 /* ParseBackendService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBackendService.m; sourceTree = "<group>"; };
-		FB7EE3DE1D59832100352344 /* BackendServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendServiceManager.h; sourceTree = "<group>"; };
-		FB7EE3DF1D59832100352344 /* BackendServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackendServiceManager.m; sourceTree = "<group>"; };
-		FB7EE3E71D598B8300352344 /* App_BackendService_Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App_BackendService_Properties.h; sourceTree = "<group>"; };
 		FB7EE3E81D598C2700352344 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -94,6 +94,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A5A8C951D75CAC30066B54D /* BackendService */ = {
+			isa = PBXGroup;
+			children = (
+				5A5A8C961D75CAC30066B54D /* App_BackendService_Properties.h */,
+				5A5A8C971D75CAC30066B54D /* ParseBackendService.h */,
+				5A5A8C981D75CAC30066B54D /* ParseBackendService.m */,
+			);
+			name = BackendService;
+			path = ../BackendService;
+			sourceTree = "<group>";
+		};
+		5A5A8C991D75CAC30066B54D /* BackendServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				5A5A8C9A1D75CAC30066B54D /* BackendServiceManager.h */,
+				5A5A8C9B1D75CAC30066B54D /* BackendServiceManager.m */,
+			);
+			name = BackendServiceManager;
+			path = ../BackendServiceManager;
+			sourceTree = "<group>";
+		};
 		FB6170811D5D7011005F2487 /* parse-library-1.12.0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +132,8 @@
 		FB7EE3B71D59828B00352344 = {
 			isa = PBXGroup;
 			children = (
+				5A5A8C951D75CAC30066B54D /* BackendService */,
+				5A5A8C991D75CAC30066B54D /* BackendServiceManager */,
 				FB6170751D5D6EF5005F2487 /* libz.tbd */,
 				FB6170731D5D6EED005F2487 /* SystemConfiguration.framework */,
 				FB6170711D5D6EE5005F2487 /* StoreKit.framework */,
@@ -137,8 +160,6 @@
 		FB7EE3C21D59828B00352344 /* BackendServiceManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				FB7EE3DA1D59832100352344 /* BackendService */,
-				FB7EE3DD1D59832100352344 /* BackendServiceManager */,
 				FB7EE3C61D59828C00352344 /* AppDelegate.h */,
 				FB7EE3C71D59828C00352344 /* AppDelegate.m */,
 				FB7EE3C91D59828C00352344 /* ViewController.h */,
@@ -160,25 +181,6 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
-		};
-		FB7EE3DA1D59832100352344 /* BackendService */ = {
-			isa = PBXGroup;
-			children = (
-				FB7EE3E71D598B8300352344 /* App_BackendService_Properties.h */,
-				FB7EE3DB1D59832100352344 /* ParseBackendService.h */,
-				FB7EE3DC1D59832100352344 /* ParseBackendService.m */,
-			);
-			path = BackendService;
-			sourceTree = SOURCE_ROOT;
-		};
-		FB7EE3DD1D59832100352344 /* BackendServiceManager */ = {
-			isa = PBXGroup;
-			children = (
-				FB7EE3DE1D59832100352344 /* BackendServiceManager.h */,
-				FB7EE3DF1D59832100352344 /* BackendServiceManager.m */,
-			);
-			path = BackendServiceManager;
-			sourceTree = SOURCE_ROOT;
 		};
 		FB7EE3E21D598AC100352344 /* framework */ = {
 			isa = PBXGroup;
@@ -258,8 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB7EE3E11D59832100352344 /* BackendServiceManager.m in Sources */,
-				FB7EE3E01D59832100352344 /* ParseBackendService.m in Sources */,
+				5A5A8C9D1D75CAC30066B54D /* BackendServiceManager.m in Sources */,
+				5A5A8C9C1D75CAC30066B54D /* ParseBackendService.m in Sources */,
 				FB7EE3CB1D59828C00352344 /* ViewController.m in Sources */,
 				FB7EE3C81D59828C00352344 /* AppDelegate.m in Sources */,
 				FB7EE3C51D59828C00352344 /* main.m in Sources */,
