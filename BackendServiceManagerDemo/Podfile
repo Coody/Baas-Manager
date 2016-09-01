@@ -1,0 +1,12 @@
+platform:ios, "8.3"
+
+# workspace 'Prime'
+# 設定 相依於 pod 的專案檔, 可設定多組, 但目前怪怪的, 先特例處理.
+
+xcodeproj 'BackendServiceManagerDemo'
+
+# mark 起來的為目前的最新版本, date: 2015年 8月 7日 周六 17時55分0秒 CST
+link_with 'BackendServiceManagerDemo'
+
+#
+pod 'Backendless', '~> 3.0.37'

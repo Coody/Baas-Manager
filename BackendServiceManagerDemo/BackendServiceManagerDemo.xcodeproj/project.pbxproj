@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A5A8C9C1D75CAC30066B54D /* ParseBackendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5A8C981D75CAC30066B54D /* ParseBackendService.m */; };
 		5A5A8C9D1D75CAC30066B54D /* BackendServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5A8C9B1D75CAC30066B54D /* BackendServiceManager.m */; };
+		A9445B168E9D1AF929B6FA82 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EBC4A6F1C390B649E79B71 /* libPods.a */; };
 		FB6170761D5D6EF5005F2487 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170751D5D6EF5005F2487 /* libz.tbd */; };
 		FB6170781D5D6F7C005F2487 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170651D5D6C90005F2487 /* AudioToolbox.framework */; };
 		FB6170791D5D6F85005F2487 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170671D5D6C98005F2487 /* CFNetwork.framework */; };
@@ -21,9 +22,6 @@
 		FB6170801D5D6FC5005F2487 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7EE3E81D598C2700352344 /* libsqlite3.tbd */; };
 		FB6170881D5D7011005F2487 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170821D5D7011005F2487 /* Bolts.framework */; };
 		FB6170891D5D7011005F2487 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170831D5D7011005F2487 /* Parse.framework */; };
-		FB61708A1D5D7011005F2487 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170841D5D7011005F2487 /* ParseFacebookUtils.framework */; };
-		FB61708B1D5D7011005F2487 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170851D5D7011005F2487 /* ParseFacebookUtilsV4.framework */; };
-		FB61708C1D5D7011005F2487 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170861D5D7011005F2487 /* ParseTwitterUtils.framework */; };
 		FB61708D1D5D7011005F2487 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6170871D5D7011005F2487 /* ParseUI.framework */; };
 		FB7EE3C51D59828C00352344 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EE3C41D59828C00352344 /* main.m */; };
 		FB7EE3C81D59828C00352344 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EE3C71D59828C00352344 /* AppDelegate.m */; };
@@ -39,6 +37,9 @@
 		5A5A8C981D75CAC30066B54D /* ParseBackendService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBackendService.m; sourceTree = "<group>"; };
 		5A5A8C9A1D75CAC30066B54D /* BackendServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendServiceManager.h; sourceTree = "<group>"; };
 		5A5A8C9B1D75CAC30066B54D /* BackendServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackendServiceManager.m; sourceTree = "<group>"; };
+		67A53892D00E87173F24FD41 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B73BE5F5F9B1C3C5D7897C69 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C9EBC4A6F1C390B649E79B71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6170651D5D6C90005F2487 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FB6170671D5D6C98005F2487 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		FB6170691D5D6CB8005F2487 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,9 +75,7 @@
 			files = (
 				FB6170801D5D6FC5005F2487 /* libsqlite3.tbd in Frameworks */,
 				FB6170761D5D6EF5005F2487 /* libz.tbd in Frameworks */,
-				FB61708B1D5D7011005F2487 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				FB61707F1D5D6FB5005F2487 /* SystemConfiguration.framework in Frameworks */,
-				FB61708C1D5D7011005F2487 /* ParseTwitterUtils.framework in Frameworks */,
 				FB61707E1D5D6FAE005F2487 /* StoreKit.framework in Frameworks */,
 				FB61708D1D5D7011005F2487 /* ParseUI.framework in Frameworks */,
 				FB61707D1D5D6FA7005F2487 /* Security.framework in Frameworks */,
@@ -87,7 +86,7 @@
 				FB6170791D5D6F85005F2487 /* CFNetwork.framework in Frameworks */,
 				FB6170891D5D7011005F2487 /* Parse.framework in Frameworks */,
 				FB6170781D5D6F7C005F2487 /* AudioToolbox.framework in Frameworks */,
-				FB61708A1D5D7011005F2487 /* ParseFacebookUtils.framework in Frameworks */,
+				A9445B168E9D1AF929B6FA82 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +112,23 @@
 			);
 			name = BackendServiceManager;
 			path = ../BackendServiceManager;
+			sourceTree = "<group>";
+		};
+		5F3D8269FEAADE4386D11E0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B73BE5F5F9B1C3C5D7897C69 /* Pods.debug.xcconfig */,
+				67A53892D00E87173F24FD41 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		652BEBE479C5CF0CA6C7B8A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9EBC4A6F1C390B649E79B71 /* libPods.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FB6170811D5D7011005F2487 /* parse-library-1.12.0 */ = {
@@ -146,6 +162,8 @@
 				FB7EE3E81D598C2700352344 /* libsqlite3.tbd */,
 				FB7EE3C21D59828B00352344 /* BackendServiceManagerDemo */,
 				FB7EE3C11D59828B00352344 /* Products */,
+				5F3D8269FEAADE4386D11E0E /* Pods */,
+				652BEBE479C5CF0CA6C7B8A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB7EE3D71D59828C00352344 /* Build configuration list for PBXNativeTarget "BackendServiceManagerDemo" */;
 			buildPhases = (
+				2748EDB03B2204C1BF6BE42F /* Check Pods Manifest.lock */,
 				FB7EE3BC1D59828B00352344 /* Sources */,
 				FB7EE3BD1D59828B00352344 /* Frameworks */,
 				FB7EE3BE1D59828B00352344 /* Resources */,
+				47D2A889043302EBAF24BB4C /* Embed Pods Frameworks */,
+				5F95A0070F44680FC25B42CA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +275,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2748EDB03B2204C1BF6BE42F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		47D2A889043302EBAF24BB4C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F95A0070F44680FC25B42CA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FB7EE3BC1D59828B00352344 /* Sources */ = {
@@ -376,6 +445,7 @@
 		};
 		FB7EE3D81D59828C00352344 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B73BE5F5F9B1C3C5D7897C69 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -392,6 +462,7 @@
 		};
 		FB7EE3D91D59828C00352344 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67A53892D00E87173F24FD41 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
