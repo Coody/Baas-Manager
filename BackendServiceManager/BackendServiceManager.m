@@ -34,7 +34,7 @@
     if ( self ) {
         _backendServiceObjectArray = [[NSMutableArray alloc] init];
         _serviceIndex = NSNotFound;
-        _queue = dispatch_queue_create("com.gonline.BackendService", NULL);
+        _queue = dispatch_queue_create("com.normi.BackendService", NULL);
     }
     return self;
 }
