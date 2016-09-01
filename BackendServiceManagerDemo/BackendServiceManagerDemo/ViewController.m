@@ -22,9 +22,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     ParseBackendService *parseBaasClass = [[ParseBackendService alloc] init];
-    parseBaasClass.parseAppID = @"Your_Parse_App_ID";
-    parseBaasClass.parseClientKey = @"Your_Parse_Client_Key";
     parseBaasClass.parseObjectName = @"Your_Parse_Object_Name";
+    [parseBaasClass initialParseWithAppID:@"Your_Parse_App_ID" 
+                            withClientKey:@"Your_Parse_Client_Key"];
     
     [[BackendServiceManager sharedInstance] addServicesWithClasses:@[parseBaasClass]];
     
