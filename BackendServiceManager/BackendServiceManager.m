@@ -10,6 +10,7 @@
 
 #pragma mark - Baas Manager
 @interface BackendServiceManager()
+@property (nonatomic , strong) dispatch_queue_t queue;
 @property (nonatomic , assign) NSUInteger serviceIndex;
 @property (nonatomic , copy) void(^successBlock)(id <BackendServiceObject_Protocol> baasClass);
 @property (nonatomic , copy) void(^failBlock)();
@@ -33,6 +34,7 @@
     if ( self ) {
         _backendServiceObjectArray = [[NSMutableArray alloc] init];
         _serviceIndex = NSNotFound;
+        _queue = dispatch_queue_create("com.normi.BackendService", NULL);
     }
     return self;
 }
@@ -67,20 +69,14 @@
 -(void)startGetBaasWithSuccessBlock:(void(^)(id <BackendServiceObject_Protocol> baasClass))responseSuccess 
                       withFailBlock:(void(^)())responseFail
 {
-    
     _serviceIndex = 0;
     self.successBlock = nil;
     self.successBlock = responseSuccess;
     self.failBlock = nil;
     self.failBlock = responseFail;
     
-    __weak __typeof(self)weakSelf = self;
-    static dispatch_queue_t queue;
-    queue = dispatch_queue_create("com.gonline.BackendService", NULL);
-    dispatch_async(queue, ^{
-        [weakSelf startGetBaas];
-    });
-    
+    // 開始取得
+    [self startGetBaas];
 }
 
 
@@ -124,30 +120,34 @@
             if ( [unit respondsToSelector:@selector(startBackendServiceWithSuccessBlock:withFailBlock:)] ) {
                 
                 __weak __typeof(self)weakSelf = self;
-                [unit startBackendServiceWithSuccessBlock:^(id <BackendServiceObject_Protocol> baasClass){
+                dispatch_async(_queue, ^{
                     
-                    // 成功！不再繼續問下去！
-                    __strong __typeof(weakSelf)strongSelf = weakSelf;
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        strongSelf.successBlock( [strongSelf.backendServiceObjectArray objectAtIndex:strongSelf.serviceIndex] );
-                    });
-                    
-                } withFailBlock:^(id <BackendServiceObject_Protocol> baasClass){
-                    
-                    // 失敗！
-                    __strong __typeof(weakSelf)strongSelf = weakSelf;
-                    
-                    // 將錯誤印出來
-                    NSLog(@"Backend service \"%@\" get fail!! (ErrorCode:%d , ErrorMsg:%@)" ,
-                          NSStringFromClass([baasClass class]) ,
-                          [baasClass.errorCode intValue] ,
-                          baasClass.errorMsg );
-                    
-                    // 檢查是否可以繼續詢問
-                    strongSelf.serviceIndex = strongSelf.serviceIndex + 1;
-                    [strongSelf startGetBaas];
-                    
-                }];
+                    [unit startBackendServiceWithSuccessBlock:^(id <BackendServiceObject_Protocol> baasClass){
+                        
+                        // 成功！不再繼續問下去！
+                        __strong __typeof(weakSelf)strongSelf = weakSelf;
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            strongSelf.successBlock( [strongSelf.backendServiceObjectArray objectAtIndex:strongSelf.serviceIndex] );
+                        });
+                        
+                    } withFailBlock:^(id <BackendServiceObject_Protocol> baasClass){
+                        
+                        // 失敗！
+                        __strong __typeof(weakSelf)strongSelf = weakSelf;
+                        
+                        // 將錯誤印出來
+                        NSLog(@"Backend service \"%@\" get fail!! (ErrorCode:%d , ErrorMsg:%@)" ,
+                              NSStringFromClass([baasClass class]) ,
+                              [baasClass.errorCode intValue] ,
+                              baasClass.errorMsg );
+                        
+                        // 檢查是否可以繼續詢問
+                        strongSelf.serviceIndex = strongSelf.serviceIndex + 1;
+                        [strongSelf startGetBaas];
+                        
+                    }];
+                });
+                
             }
             else{
                 

@@ -63,17 +63,17 @@ typedef void(^FailBlock)(id <BackendServiceObject_Protocol> baasObject);
 +(instancetype)sharedInstance;
 
 /**
- *  輸入符合 BackendServiceObject_Protocol 的服務
+ *  輸入符合 BackendServiceObject_Protocol 的服務類別的實體
  *
- *  @param classNames 輸入此 class 的名稱即可（ NSString ），此方法讓您一次輸入多筆
+ *  @param classes 輸入此 class 的實體，此方法讓您一次輸入多筆
  *  @warning - 詢問順序會從您設定給此工具開始往後排列、設定同樣一組 class 是無效的（會以目前已經存在的為主）
  */
 -(void)addServicesWithClasses:(NSArray *)classes;
 
 /**
- *  輸入符合 BackendServiceObject_Protocol 的服務
+ *  輸入符合 BackendServiceObject_Protocol 的服務類別的實體
  *
- *  @param className 輸入此 class 的名稱即可（ NSString ），此方法是讓你獨自加入此 class name
+ *  @param tempClass 輸入此 class 的實體
  */
 -(void)addServiceWithClass:(Class)tempClass;
 

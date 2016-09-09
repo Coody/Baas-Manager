@@ -14,10 +14,10 @@
 
 #pragma mark -
 //=== Other properties and methods you wnat to use.
-@property (nonnull , nonatomic , strong) NSString *parseAppID;
-@property (nonnull , nonatomic , strong) NSString *parseClientKey;
+@property (nonnull , nonatomic , readonly) NSString *parseAppID;
+@property (nonnull , nonatomic , readonly) NSString *parseClientKey;
 @property (nonnull , nonatomic , strong) NSString *parseObjectName;
--(void)initialParse;
+-(void)initialParseWithAppID:(NSString *)tempAppID withClientKey:(NSString *)tempClientKey;
 
 
 #pragma mark - BackendServiceObject_Protocol

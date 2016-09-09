@@ -25,8 +25,11 @@ static NSString *const kTestProperty = @"Your_parse_Query_Object_TestProperty_Na
     return self;
 }
 
--(void)initialParse{
+-(void)initialParseWithAppID:(NSString *)tempAppID 
+               withClientKey:(NSString *)tempClientKey{
     // you can put it in AppDelegate's method application:didFinishLaunchingWithOptions:
+    _parseAppID = [tempAppID copy];
+    _parseClientKey = [tempClientKey copy];
     [Parse setApplicationId:_parseAppID 
                   clientKey:_parseClientKey];
 }
