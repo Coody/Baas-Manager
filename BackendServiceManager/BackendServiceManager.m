@@ -13,7 +13,7 @@
 @property (nonatomic , strong) dispatch_queue_t queue;
 @property (nonatomic , assign) NSUInteger serviceIndex;
 @property (nonatomic , copy) void(^successBlock)(id <BackendServiceObject_Protocol> baasClass);
-@property (nonatomic , copy) void(^failBlock)();
+@property (nonatomic , copy) void(^failBlock)(void);
 @end
 
 @implementation BackendServiceManager
@@ -67,7 +67,7 @@
 }
 
 -(void)startGetBaasWithSuccessBlock:(void(^)(id <BackendServiceObject_Protocol> baasClass))responseSuccess 
-                      withFailBlock:(void(^)())responseFail
+                      withFailBlock:(void(^)(void))responseFail
 {
     _serviceIndex = 0;
     self.successBlock = nil;

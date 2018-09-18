@@ -86,7 +86,7 @@ typedef void(^FailBlock)(id <BackendServiceObject_Protocol> baasObject);
  *  @warning 如果要知道錯誤的詳細資訊，可以直接從此 manager 的 backendServiceObjectDic、或是 backendServiceObjectArray 取出服務來看內部錯誤訊息是什麼？
  */
 -(void)startGetBaasWithSuccessBlock:(void(^)(id <BackendServiceObject_Protocol> baasClass))responseSuccess 
-                      withFailBlock:(void(^)())responseFail;
+                      withFailBlock:(void(^)(void))responseFail;
 
 /**
  *  取得目前成功詢問的 service
