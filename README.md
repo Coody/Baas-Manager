@@ -6,7 +6,7 @@
 Manage all your BaaS, set sequence easily.
 
 # Brief
-`TODO`
+Manage all your BaaS, set sequence easily.
 
 # How to use
 `TODO`
